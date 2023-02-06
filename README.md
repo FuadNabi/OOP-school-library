@@ -17,9 +17,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Enumerable <a name="about-project"></a>
+# 📖 OOP School Library <a name="about-project"></a>
 
-> In this project we learn how to use a module inside your class. For this we create a class MyList and a module MyEnumerable..
+> This repo is a school library tool that allows you to record what books are in the library and who borrows them, the project focused on practicing the main four concepts in oop using ruby.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -105,7 +105,7 @@ Example command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/FuadNabi/Enumerable/issues/).
+Feel free to check the [issues page](https://github.com/FuadNabi/OOP-school-library/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,6 +140,6 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/FuadNabi/Enumerable/blob/dev/LICENSE) licensed.
+This project is [MIT](https://github.com/FuadNabi/OOP-school-library/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
