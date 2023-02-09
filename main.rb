@@ -1,12 +1,9 @@
-require_relative 'person'
+require_relative 'app'
 
-person = Person.new(22, 'maximilianus')
-person.correct_name
-CapitalizedPerson = CapitalizeDecorator.new(person)
-CapitalizedPerson.correct_name
-CapitalizedTrimmedPerson = TrimmerDecorator.new(CapitalizedPerson)
-CapitalizedTrimmedPerson.correct_name
+def main
+  app = App.new
+   app.run
+    puts
+end
 
-puts(person.correct_name)
-puts(CapitalizedPerson.correct_name)
-puts(CapitalizedTrimmedPerson.correct_name)
+main
