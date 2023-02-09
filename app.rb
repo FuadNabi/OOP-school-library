@@ -36,6 +36,78 @@ class App
     end
   end
 
+  def list_all_people
+    if @people.empty?
+      puts 'No person added to the system'
+    else
+      @people.each do |person|
+        puts "#{person.class}) Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
+    end
+  end
+
+  def list_all_people_with_index
+    @people.each_with_index do |person, index|
+      puts "#{index}. [#{person.class}] Name: #{person.name}, ID #{person.id}, Age: #{person.age}"
+    end
+  end
+
+  def create_student
+    print 'Age: '
+    age = gets.chomp
+    
+    print 'Name: '
+    name = gets.chomp
+
+    print 'Do this person have parental permission? [Y/N]: '
+    permission = gets.chomp.downcase
+
+    case permission
+    when 'y' then parent_permission = true
+    when 'n' then parent_permission = false
+    end
+
+    @people.push(Student.new('11', age, name, parent_permission: parent_permission))
+  end
+
+  def create_teacher
+    print 'Age: '
+    age = gets.chomp
+    
+    print 'Name: '
+    name = gets.chomp
+
+    print 'Specialization: '
+    specialization = gets.chomp
+    
+    @people.push(Teacher.new(specialization, age, name))
+  end
+
+  def create_person
+    print 'Choose options for creating a person: Student(1), Teacher(2)? [Input the number]: '
+    case gets.chomp
+    when '1'
+      create_student
+
+    when '2'
+      create_teacher
+    end
+
+    puts 'Person Created Successfully'
+  end
+
+  def create_book
+    print 'Title: '
+    title = gets.chomp
+
+    print 'Author: '
+    author = gets.chomp
+
+    @books.push(Book.new(title, author))
+
+    puts 'Book Created Successfully'
+  end
+
   def run
     puts 'Please choose an option to start'
     display_cmd
