@@ -40,7 +40,7 @@ class App
     if @people.empty?
       puts 'No person added to the system'
     else
-      @people.each do |person|
+      @people.each do |perso|
         puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
     end
