@@ -1,7 +1,7 @@
 require_relative 'app'
 
 class Main
-  def initialize 
+  def initialize
     @app = App.new
 
     @cmd = {
@@ -46,13 +46,12 @@ class Main
     display_cmd
     exit_option
   end
-
 end
 
 def command_call
   main = Main.new
-  
-  loop do 
+
+  loop do
     main.run
     puts
   end
