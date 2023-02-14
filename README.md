@@ -85,12 +85,12 @@ Example command:
 - Twitter: [@twitterhandle](https://twitter.com/FuadNebiyev2)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/fuad-nabiyev/)
 
-
-👤 **Yussuf Bashir**
+👤 **Bashir Yussuf**
 
 - GitHub: [@githubhandle](https://github.com/yussufOB)
 - Twitter: [@twitterhandle](https://twitter.com/_ybash)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/yussuf-bashir/)
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 > Describe 1 - 3 features you will add to the project.
