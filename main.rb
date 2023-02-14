@@ -30,7 +30,7 @@ class Main < App
   def exit_option
     input = gets.chomp
     if input == '7'
-      Database.save(list_all_books, list_all_people)
+      Database.save(@books, @people, @rentals)
       exit
     else
       choose_option(input)

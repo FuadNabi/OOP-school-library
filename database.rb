@@ -1,9 +1,11 @@
 require 'json'
+require 'pry'
 
 class Database
-  def self.save(books, people)
+  def self.save(books, people, rentals)
     save_books(books)
     save_people(people)
+    save_rentals(rentals)
   end
 
   def self.save_books(books)
@@ -13,9 +15,9 @@ class Database
     records = read_existing_data(booksdata)
 
     books.each do |book|
-      next if records.any? { |r| r['title'] == book.title && r['author'] == book.author }
+      next if records.any? { |r| r['title'] == book.title && r['author'] == book.author && r['id'] == book.id }
 
-      records << { title: book.title, author: book.author }
+      records << { title: book.title, author: book.author, id: book.id }
     end
 
     File.write(booksdata, JSON.generate(records))
@@ -34,6 +36,23 @@ class Database
                    parent_permission: person.can_use_services? }
     end
     File.write(peopledata, JSON.generate(records))
+  end
+
+  def self.save_rentals(rentals)
+    return if rentals.nil?
+
+    rentalsdata = './datas/rentals.json'
+    records = read_existing_data(rentalsdata)
+
+    rentals.each do |rental|
+      next if records.any? do |r|
+                r['person_id'] == rental.person.id && r['book_id'] == rental.book.id && r['date'] == rental.date
+              end
+
+      records << { date: rental.date, book_id: rental.book.id, person_id: rental.person.id }
+    end
+
+    File.write(rentalsdata, JSON.generate(records))
   end
 
   def self.read_existing_data(data)
