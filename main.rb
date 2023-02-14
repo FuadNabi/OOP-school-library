@@ -1,4 +1,5 @@
 require_relative 'app'
+require_relative 'database'
 
 class Main
   def initialize
@@ -29,6 +30,7 @@ class Main
   def exit_option
     input = gets.chomp
     if input == '7'
+      Database.save(@app.list_all_books)
       exit
     else
       choose_option(input)
