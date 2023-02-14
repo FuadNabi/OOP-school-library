@@ -8,14 +8,12 @@ class Person < Nameable
     super()
     @id = Random.rand(1..1000)
     @name = name
-    @age = age
+    @age = age.to_i
     @parent_permission = parent_permission
     @rentals = []
   end
 
-  attr_reader :id
-
-  attr_accessor :name, :age, :rentals
+  attr_accessor :name, :age, :rentals, :id
 
   def of_age?
     @age >= 18

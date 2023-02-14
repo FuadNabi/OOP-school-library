@@ -8,7 +8,7 @@ class App
   def initialize
     @books = LoadData.load_books
 
-    @people = []
+    @people = LoadData.load_people
   end
 
   def list_all_books
