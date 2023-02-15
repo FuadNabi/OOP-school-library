@@ -1,7 +1,7 @@
 require './book'
 require './person'
 
-person = Person.new(20, 'Fuad Bash')
+person = Person.new(20, 'Bash')
 
 describe Book do
   context 'Testing Book Class' do
