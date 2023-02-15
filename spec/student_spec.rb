@@ -10,5 +10,10 @@ describe Student do
       student.add_classroom(geography)
       expect(student.classroom).to eq geography
     end
+
+    it 'The play_hooky method should return ¯(ツ)/¯' do
+      student = Student.new(21, 'Fuad', true)
+      expect(student.play_hooky).to eq '¯(ツ)/¯'
+    end
   end
 end
